@@ -1,0 +1,16 @@
+main{
+    width:100vw; height: 85vh;
+
+}
+#choose-drop-image-area{
+    width:50%; height: 50%;
+    border: 1px dashed black;
+}
+#choose-drop-image-area:hover{
+    cursor: pointer;
+}
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
