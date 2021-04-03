@@ -1,7 +1,80 @@
+
 main{
     width:100vw; height: 85vh;
+    position: relative;
+}
+/* image crop window styles */
+#image-crop-window{
+    width:100%; height: 100%;
+}
+#image-crop-header{
+    min-height: 60px;
+    width:100%; height: 10%;
+    /* background-color: red; */
+    outline:1px solid gray ;
+}
+/* image-crop-header children:
+    image close btn */
+#image-close-btn{
+    float: right;
+    font-size:40px;
+    position: relative;
+    right:30px;
+    overflow: hidden;
+}
+#image-close-btn:hover{
+    cursor: pointer;
+}
+
+#image-crop-main{
+    min-height: 400px;
+    width:100%; height: 90%;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+}
+/* image crop main children:
+    image-crop
+    image-options */
+#image-crop{
+    width:80%; height: 100%;
+    /* zoom:.5; */
+    overflow: scroll;
+}
+#image-options{
+    min-height: 400px;
+    width:20%; height: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+}
+/* image options children:
+    imagetitlecontaianer
+    imagepreviewcontainer
+    downloadcontainer */
+#image-title-container{
+    min-height: 50px;
+    width:100%; height: 10%;
+}
+#image-title{
+    font-size: 20px;
+}
+#image-preview-container{
+    min-height: 50px;
+    width:100%; height: 15%;
+    /* background-color: hotpink; */
+}
+#temp-container{
+    min-height: 50px;
+    width:100%; height: 50%;
+}
+#download-container{
+    min-height: 50px;
+    width:100%; height: 20%;
 
 }
+
+
+/* choose drop image area styles */
 #choose-drop-image-area{
     width:50%; height: 50%;
     border: 1px dashed black;
@@ -13,4 +86,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* media */
+@media (max-width: 900px) {
+    #image-crop{
+        width:100%;
+    }
+    #image-options{
+        display: none;
+        /* width:40%; height: 100%;
+        position: relative;
+        background-color: rgb(231, 14, 14); */
+    }
 }

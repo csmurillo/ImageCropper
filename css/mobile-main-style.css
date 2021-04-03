@@ -1,0 +1,15 @@
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #image-crop{
+        width:100%;
+    }
+    #image-options{
+        display: none;
+        /* width:40%; height: 100%;
+        position: relative;
+        background-color: rgb(231, 14, 14); */
+    }
+}
