@@ -4,6 +4,7 @@ function closeImageCropWindow(){
     imageCropWindow.hidden=true;
     addChooseDropImageArea();
     var chooseDropImage=document.getElementById('choose-drop-image-area');
+    document.getElementById("file-picker").value = null;
 }
 
 

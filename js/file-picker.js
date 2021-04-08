@@ -11,10 +11,10 @@ function hasFile(input){
     reader.onload=(e)=>{
         var image=document.getElementById('image');
         var imageTitle=document.getElementById('image-title');
-        var smlImage=document.getElementById('sml-image');
+        var imgPrev=document.getElementById('image-prev');
         // console.log(e.target.);
         imageTitle.innerText=input.files[0].name;
-        smlImage.src=""+e.target.result;
+        imgPrev.src=""+e.target.result;
         image.src=""+e.target.result;
     };
     var imageCropWindow=document.getElementById('image-crop-window');

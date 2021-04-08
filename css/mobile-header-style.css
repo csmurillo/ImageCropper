@@ -1,0 +1,16 @@
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header{
+      width:100vw; height: 20vh;
+      background-color: rgb(245, 245, 245);
+    }
+    #logo{
+      width:220px; height: 100%;
+    }
+    main{
+      width: 100vw; height: 90vh;
+    }
+}

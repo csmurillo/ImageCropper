@@ -3,6 +3,7 @@
     <head>
         <title></title>
         <link rel="stylesheet" href="./css/header-style.css">
+        <link rel="stylesheet" href="./css/mobile-header-style.css">
         <link rel="stylesheet" href="./css/main-style.css">
         <link rel="stylesheet" href="./css/mobile-main-style.css">
         <!-- CSS only -->
@@ -10,51 +11,110 @@
     </head>
     <body style="margin: 0 auto;">        
         <header>
-            <div id="logo">
+            <div id="logo" class="center-content">
                 <img src="assets/imageCropper.png">
             </div>
         </header>
         <main id="main-container" class="center-content">
             <div id="image-crop-window" hidden=true>
                 <div id="image-crop-header">
-                    <!-- <div id="image-close-btn" onclick="closeImageCropWindow()">X</div> -->
-                    <div id="image-close-btn"onclick="closeImageCropWindow()">
+                    <div id="image-close-btn" class="center-content" onclick="closeImageCropWindow()">
                         <!-- &times; -->
-                        <span style="overflow: hidden;">&times;</span>
+                        <span id="x-close-btn" style="overflow: hidden;">&times;</span>
                     </div>
                 </div>
                 <div id="image-crop-main">
                     <div id="image-crop" class="center-content">
                             <img id="image" src=""/>
                     </div>
-                    <div id="image-options">
+                    <div id="image-crop-options">
                         <div id="image-title-container" class="center-content">
-                            <div id="image-title">
+                            <div id="image-title"></div>
+                        </div>
+                        <div id="image-prev-container" class="center-content">
+                            <img id="image-prev">
+                        </div>
+                        <div id="image-crop-detail-container" class="center-content">
+                            <div id="image-crop-detail-block">
+                                <div id="image-crop-detail-title" class="center-content">Image Crop Detail</div>
+                                <div id="image-crop-x" class="crop-detail">
+                                    <div id="image-crop-x-label">
+                                        X:<span id="image-x"></span>
+                                    </div>
+                                </div>
+                                <div id="image-crop-y" class="crop-detail">
+                                    <div id="image-crop-y-label">
+                                        Y:<span id="image-y"></span>
+                                    </div>
+                                </div>
+                                <div id="image-crop-width" class="crop-detail">
+                                    <div id="image-crop-width-label">
+                                        Width:<span id="image-width"></span>
+                                    </div>
+                                </div>
+                                <div id="image-crop-height" class="crop-detail">
+                                    <div id="image-crop-height-label">
+                                        Height:<span id="image-height"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div id="image-preview-container" class="center-content">
-                            <div id="image-preview">
-                                <img id="sml-image" width="120px" height="80px" />
+                        <div id="image-download-container" class="center-content">
+                            <div id="image-download-button" class="center-content">
+                                <a class="center-content" style="color:black">
+                                    <img id="image-download-icon" src="assets/icons/download.png" />
+                                    <div id="download-label">Download</div>
+                                </a>
                             </div>
                         </div>
-                        <div id="temp-container">
-
-                        </div>
-                        <div id="download-container" class="center-content">
-                            <!-- <button id="download">Download</button> -->
-                            <button type="button" class="btn btn-outline-primary btn-lg">Download</button>
+                    </div>
+                    <!-- image crop option for mobile devices -->
+                    <div id="image-crop-options-mobile">
+                        <div id="image-crop-options-mobile-wrapper">
+                            <div id="image-crop-option-mobile-size-wrapper">
+                                <div id="image-title-container-mobile" class="center-content">
+                                    <div id="image-title-mobile">Image Crop Detail</div>
+                                </div>
+                                <div id="image-crop-detail-container-mobile" class="center-content">
+                                    <div id="image-crop-x-mobile">
+                                        <div id="image-crop-x-label">
+                                            X:<span id="image-x"></span>
+                                        </div>
+                                    </div>
+                                    <div id="image-crop-y-mobile">
+                                        <div id="image-crop-y-label">
+                                            Y:<span id="image-y"></span>
+                                        </div>
+                                    </div>
+                                    <div id="image-crop-width-mobile">
+                                        <div id="image-crop-width-label">
+                                            Width:<span id="image-width"></span>
+                                        </div>
+                                    </div>
+                                    <div id="image-crop-height-mobile">
+                                        <div id="image-crop-height-label">
+                                            Height:<span id="image-height"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="image-download-container-mobile" class="center-content">
+                                <div id="image-download-button-mobile"  class="center-content">
+                                    <a style="width:100%; height:100%; color:black;" class="center-content" download>
+                                        <div id="download-label-mobile">Download</div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="choose-drop-image-area" onclick="chooseFile();" class="center-content">
-                Choose/Drop Image
+                Choose Image
             </div>
             <input id="file-picker" type="file" hidden=true onchange="hasFile(this);">
         </main>
     </body>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>    
     <script src="./js/file-picker.js"></script>
     <script src="./js/image-crop.js"></script>
 </html>

@@ -1,101 +1,138 @@
-
+/* main styles */
 main{
-    width:100vw; height: 85vh;
-    position: relative;
+    min-height: 500px;
+    width:100vw; height: 80vh;
+    background-color: rgb(248, 248, 248);
 }
-/* image crop window styles */
 #image-crop-window{
-    width:100%; height: 100%;
+    width:100vw; height: 100%;
+    position: relative;
 }
 #image-crop-header{
-    min-height: 60px;
-    width:100%; height: 10%;
-    /* background-color: red; */
-    outline:1px solid gray ;
-}
-/* image-crop-header children:
-    image close btn */
-#image-close-btn{
-    float: right;
-    font-size:40px;
+    min-height: 80px;
+    width:100vw; height: 15%;
+    background-color: rgb(250, 250, 250);
     position: relative;
-    right:30px;
-    overflow: hidden;
+    border-bottom:1px solid gray;
 }
-#image-close-btn:hover{
+#image-close-btn{
+    width:100px; height: 100%;
+    position: absolute;
+    right:0;
+}
+#x-close-btn{
+    font-size: 80px;
+    color:rgb(146, 146, 146);
     cursor: pointer;
 }
-
+/* sibling of image-crop-header */
 #image-crop-main{
-    min-height: 400px;
-    width:100%; height: 90%;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(233, 233, 233);
+    width:100%; height: 85%;
     display: flex;
 }
-/* image crop main children:
-    image-crop
-    image-options */
 #image-crop{
     width:80%; height: 100%;
-    /* zoom:.5; */
-    overflow: scroll;
-}
-#image-options{
-    min-height: 400px;
-    width:20%; height: 100%;
     position: relative;
-    background-color: rgb(255, 255, 255);
-    
 }
-/* image options children:
-    imagetitlecontaianer
-    imagepreviewcontainer
-    downloadcontainer */
+#image-crop-options{
+    border-left:1px solid gray;
+    background-color: rgb(255, 255, 255);
+    width:20%; height: 100%;
+}
+/* image crop options children */
 #image-title-container{
-    min-height: 50px;
     width:100%; height: 10%;
 }
-#image-title{
-    font-size: 20px;
+#image-prev-container{
+    width:100%; height: 30%;
 }
-#image-preview-container{
-    min-height: 50px;
-    width:100%; height: 15%;
-    /* background-color: hotpink; */
+#image-prev{
+    min-width: 40px; min-height: 40px;
+    width:100px; height: 80px;
 }
-#temp-container{
-    min-height: 50px;
-    width:100%; height: 50%;
+#image-crop-detail-container{
+    width:100%; height: 40%;
 }
-#download-container{
-    min-height: 50px;
+#image-crop-detail-title{
     width:100%; height: 20%;
-
 }
-
-
-/* choose drop image area styles */
+#image-crop-detail-block{
+    display: block;
+    width:70%; height: 100%;
+}
+#image-download-container{
+    width:100%; height: 20%;
+}
+#image-download-button{
+    width: 100%; height: 100%;
+    border:1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+#image-download-button:hover{
+    box-shadow: 3px 3px 10px 1px grey;
+    border:1px solid gray;
+    cursor:pointer;
+}
+#image-download-icon{
+    width:60px; height: 50px;
+}
+#download-label{
+    font-size: 120%;
+    padding-left: 10px;
+}
+#image-crop-options-mobile-wrapper{
+    display: flex; 
+    height: 100%;
+    width: 100%;
+}
+#image-crop-option-mobile-size-wrapper{
+    position: relative; height: 100%; width: 80%;
+}
 #choose-drop-image-area{
-    width:50%; height: 50%;
-    border: 1px dashed black;
+    width:70%; height: 80%;
+    border: 1px dashed rgb(0, 0, 0);
 }
 #choose-drop-image-area:hover{
     cursor: pointer;
 }
-.center-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* media */
-@media (max-width: 900px) {
+/* Portrait and Landscape */
+@media (max-width: 850px) {
+    #image-crop-main{
+        display: block;
+    }
     #image-crop{
-        width:100%;
+        width:100%; height: 80%;
+        overflow-x: hidden;
     }
-    #image-options{
+    #image-crop-options{
         display: none;
-        /* width:40%; height: 100%;
-        position: relative;
-        background-color: rgb(231, 14, 14); */
     }
+    #image-crop-options-mobile{
+        display: block;
+        min-height: 98px;
+        width:100%; height: 20%;
+        background-color: rgb(248, 248, 248);
+    }
+    #image-title-container-mobile{
+        min-height: 24px;
+        width:100%; height: 20%;
+        font-size: 18px; 
+     }
+    #image-download-container-mobile{
+        width:20%; height: 100%;
+        border-left: 1px solid black;
+        position: relative;
+    }
+    #image-download-button-mobile{
+        position: relative;
+        width: 100%; height: 100%;
+    }
+ 
+}
+@media (min-width: 850px) {
+    #image-crop-options-mobile{
+        display:none;
+    }
+    
 }
