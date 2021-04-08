@@ -1,17 +1,18 @@
+// toggle window close/open
+// cleans up resources
 function closeImageCropWindow(){
-    console.log("CLOSE IMAGE");
     var imageCropWindow=document.getElementById('image-crop-window');
     imageCropWindow.hidden=true;
-    addChooseDropImageArea();
-    var chooseDropImage=document.getElementById('choose-drop-image-area');
     document.getElementById("file-picker").value = null;
+    clearImg();
+    $("#image").cropper('destroy');
+    addChooseDropImageArea();
+}
+function clearImg(){
+    var image=document.getElementById('image');
+    var imgPrev=document.getElementById('image-prev');
+    imgPrev.src="";
+    image.src="";
 }
 
 
-// function getImageCoord(){
-//     var image=document.getElementById("image");
-//     image.addEventListener('mousemove',(e)=>{
-//         console.log('x'+e.offsetX+'y'+e.offsetY);
-//     });
-// }
-// window.onload=getImageCoord();
