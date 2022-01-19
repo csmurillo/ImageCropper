@@ -13,7 +13,6 @@ Crop any image.
 
 
 ### Screenshot
-
 ![](./screenshot/screenshotimagecropper.png)
 
 ### Links
