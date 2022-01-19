@@ -79,7 +79,7 @@ function addChooseDropImageArea(){
     chooseDropImage.style.width="50%";
     chooseDropImage.style.height="50%";
     chooseDropImage.style.border="1px dashed black";
-    chooseDropImage.innerText="Choose/Drop Image";
+    chooseDropImage.innerText="Choose Image";
     chooseDropImage.addEventListener('click',()=>{
         chooseFile();
     });
